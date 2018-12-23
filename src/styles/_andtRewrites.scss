@@ -1,0 +1,13 @@
+@import "./variables";
+
+/* Selects */
+.ant-select-selection:focus,
+.ant-select-selection:active {
+  border-color: map-get($colors, primary);
+  box-shadow: none;
+}
+
+.ant-select-dropdown-menu-item:hover {
+  background-color: transparentize(map-get($colors, primary), 0.5);
+  color: white;
+}

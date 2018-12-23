@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+config.js
+ecosystem.json
+build
+
+# Misc
+Thumbs.db
+.DS_Store
+.vscode
