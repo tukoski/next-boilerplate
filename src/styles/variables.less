@@ -1,0 +1,46 @@
+/* Colors */
+@colors: {
+  primary: #485e29;
+  secondary: #fcfcfc;
+  action: #f37e30;
+  gray: #f5f5f5;
+  darkgray: #e4e4e4;
+  darkgray2: #d8d8d8;
+  green: green;
+  orange: orange;
+  red: red;
+  link: #40a9ff;
+  white: #ffffff;
+  yellow: #fcc829;
+  text: #4a4a4a;
+};
+
+/* Antd break points */
+@break-points: {
+  small: "576px";
+  medium: "768px";
+  large: "992px";
+  extra-large: "1200px";
+  x-extra-large: "1600px";
+};
+
+each(@colors, {
+  .@{key}-bg {
+    background-color: @value !important;
+    &:hover,
+    &:active {
+      background-color: @value !important;
+    }
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  .@{key} {
+    color: @value !important;
+    &:hover,
+    &:active {
+      color: @value;
+    }
+  }
+});

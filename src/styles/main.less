@@ -1,0 +1,75 @@
+@import (css) url("https://fonts.googleapis.com/css?family=Raleway");
+@import (once) "~antd/dist/antd.less";
+@import (once) "./variables";
+@import (once) "./common";
+
+* {
+  box-sizing: border-box;
+}
+
+#app,
+[data-reactroot] {
+  height: 100%;
+}
+
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway";
+  margin: 0;
+}
+
+a,
+a:hover {
+  color: #4a4a4a;
+}
+
+/* Change the appearance of the scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-border-radius: 80px;
+}
+::-webkit-scrollbar:hover {
+  background-color: rgba(0, 0, 0, 0.09);
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  background: rgba(0, 0, 0, 0.61);
+  -webkit-border-radius: 80px;
+}
+::-webkit-scrollbar-thumb:vertical:active {
+  background: rgba(0, 0, 0, 0.61);
+  -webkit-border-radius: 80px;
+}
+
+/* buttons */
+button.btn-action,
+.btn-action,
+.btn-primary {
+  /* background-color: @colors[action];
+  color: @colors[secondary] !important; */
+  border-radius: 20px;
+  font-family: "Raleway";
+}
+
+.btn-action,
+.btn-primary {
+  cursor: pointer;
+}
+
+/* Inputs */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}

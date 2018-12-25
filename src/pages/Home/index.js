@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+/* Antd */
+import { Row, Col } from "antd";
 /* Actions */
 import { login } from "../../redux/actions/user";
 /* Styles */
-import "./style.scss";
+import "./style.less";
 
 class Home extends Component {
   static async getInitialProps({ pathname, req, query }) {
@@ -19,7 +21,17 @@ class Home extends Component {
 
   render() {
     const { userAgent } = this.props;
-    return <div id="home-page">Hello world in {userAgent}</div>;
+    return (
+      <Row id="home-page">
+        <Col xs={24}>
+          <img src="static/images/logo.jpg" />
+          <span className="margin-left secondary-bg comment">
+            No mames wey!
+          </span>
+          <p className="red margin-top">Hello world in {userAgent}</p>
+        </Col>
+      </Row>
+    );
   }
 }
 
