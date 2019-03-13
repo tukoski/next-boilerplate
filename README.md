@@ -18,9 +18,20 @@ For the developer's facility this repository has several npm scripts ready to be
 
 ```shell
 │ / \# → Root
+├── __mocks__/ \# → Global mocks
 ├── build/ \# → Automatically generated compiled code
 ├── src/ \# → Client source code
 │ ├── components/ \# → Reusable components (They do not know redux)
+| | ├── App/ \# → Folder to group components belonging to a module.
+| | | ├── ExampleComponent/
+| | | | ├── __test__/ \# → Folder with jest testing scripts
+| | | | ├── index.jsx
+| | | | ├── style.less
+| | ├── UI/  \# → Groups the components that do not belong to a specific module.
+| | | ├── ExampleComponent/
+| | | | ├── __test__/ \# → Folder with jest testing scripts
+| | | | ├── index.jsx
+| | | | ├── style.less
 │ ├── pages/ \# → React containers
 │ ├── redux/ \# → Actions, reducers, store & types
 │ │ ├── actions/
