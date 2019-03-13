@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 /* Antd */
 import { Row, Col } from "antd";
 /* Actions */
-import { login } from "../../redux/actions/user";
+import { login } from "redux/actions/user";
 /* Styles */
 import "./style.less";
 

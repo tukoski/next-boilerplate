@@ -20,6 +20,10 @@ module.exports = withCss(
     lessLoaderOptions: {
       javascriptEnabled: true,
       modifyVars: themeVariables // make your antd custom effective
+    },
+    webpack(config, options) {
+      config.resolve.modules.push("src");
+      return config;
     }
   })
 );

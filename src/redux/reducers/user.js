@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { USER_LOGIN, USER_LOGOUT, SET_PROFILE } from "../types";
+import { USER_LOGIN, USER_LOGOUT, SET_PROFILE } from "redux/types";
 
 const authenticated = (state = false, action) => {
   switch (action.type) {

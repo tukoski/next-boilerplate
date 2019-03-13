@@ -1,4 +1,4 @@
-import { USER_LOGIN } from "../types";
+import { USER_LOGIN } from "redux/types";
 
 /**
  * Login

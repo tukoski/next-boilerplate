@@ -25,7 +25,8 @@ For the developer's facility this repository has several npm scripts ready to be
 │ │ └── ExampleComponent/
 │ │     ├── __test__/ \# → Folder with jest testing scripts
 │ │     └── index.jsx
-│ ├── pages/ \# → React containers
+│ ├── containers/ \# → React containers
+│ ├── pages/ \# → React pages
 │ ├── redux/ \# → Actions, reducers, store & types
 │ │ ├── actions/
 │ │ ├── reducers/
@@ -76,7 +77,7 @@ myCustomMethod(){}
 ```
 
 - There must be one component for each container. The containers should not have elements of styles.
-- The containers in most cases should not have status, event management and knowledge of the store. These should be provided by your container.
+- The component in most cases should not have status, event management and knowledge of the store. These should be provided by your container.
 
 ## Libraries and frameworks
 

@@ -1,9 +1,11 @@
 import React from "react";
 import App, { Container } from "next/app";
 import Head from "next/head";
-import withReduxStore from "../utils/with-redux-store";
 import { Provider } from "react-redux";
-import "../styles/main.less";
+/* Containers */
+import PageLayout from "containers/Page";
+/* Helpers */
+import withReduxStore from "utils/with-redux-store";
 
 class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -15,9 +17,9 @@ class MyApp extends App {
   }
 
   render() {
-    const { Component, pageProps, reduxStore } = this.props;
+    const { Component, pageProps, reduxStore, router } = this.props;
     return (
-      <Container>
+      <Container className="full-height">
         <Head>
           <title>My page title</title>
 
@@ -29,10 +31,18 @@ class MyApp extends App {
             content="initial-scale=1.0, width=device-width"
           />
           <link rel="icon" href="/static/favicon.png" />
+          <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+            crossOrigin="anonymous"
+          />
         </Head>
 
         <Provider store={reduxStore}>
-          <Component {...pageProps} />
+          <PageLayout params={router.query}>
+            <Component {...pageProps} />
+          </PageLayout>
         </Provider>
       </Container>
     );
